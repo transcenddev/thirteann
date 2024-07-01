@@ -1,0 +1,349 @@
+body {
+  margin: 0;
+  transition: all 0.5s ease-in-out;
+  overflow-x: hidden;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.main-content {
+  padding: 20px;
+
+  background-color: #eff3fd;
+
+  overflow-y: auto;
+}
+
+.main-header,
+.header-inventory {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 1rem;
+}
+
+.header-inventory {
+  margin-top: 2rem !important;
+}
+
+h1 {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+
+
+.product_image {
+  width: 50px;
+  height: 50px;
+}
+
+/* .table-section {
+  background-color: #ffffff;
+  padding: 20px;
+
+  border-radius: 20px;
+}
+
+#staff_table_wrapper {
+  border: none;
+}
+
+#staff_table th {
+  border: none;
+  background-color: #f7f8fa !important;
+}
+
+#staff_table td {
+  border: none;
+} */
+
+/* button {
+  background-color: #5f66e9 !important;
+  color: white !important;
+  padding: 1rem !important;
+
+} */
+
+button p {
+  margin: 0 !important;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  button {
+    font-size: 0.9rem !important;
+  }
+
+  button p {
+    display: none !important;
+  }
+
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  padding: 0.5rem 0.75rem;
+  margin-left: 2px;
+  font-size: 14px;
+}
+
+.product_image {
+  display: none;
+}
+
+
+/* Table Responsive */
+.wrapper {
+  width: min(1700px, 100% - 1rem) !important;
+  margin-inline: auto !important;
+}
+
+
+#order_form .table tr td {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  background: #111 !important;
+}
+
+table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  background: #111 !important;
+}
+
+thead {
+  border: none;
+}
+
+th {
+  background-color: #f7f8fa !important;
+  border: none;
+}
+
+td:last-child {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem;
+}
+
+caption,
+th,
+td,
+tr,
+thead {
+  padding: 1rem !important;
+  border: none !important;
+}
+
+caption,
+th {
+  text-align: left !important;
+
+}
+
+/* tr:nth-child(even) td {
+  background-color: #f7f8fa !important;
+}
+
+tr:nth-child(odd):hover td {
+  background-color: #f7f8fa !important;
+  cursor: pointer !important;
+} */
+
+table.dataTable.no-footer {
+  border-bottom: none !important;
+  margin-bottom: 1rem !important;
+}
+
+@media (max-width: 760px) {
+  th {
+    display: none;
+  }
+
+  td {
+    display: grid !important;
+    grid-template-columns: 15ch auto !important;
+    gap: 0.5rem !important;
+    padding: .5rem 1rem !important;
+  }
+
+  td:first-child {
+    padding-top: 2rem !important;
+  }
+
+  td:last-child {
+    padding-bottom: 2rem !important;
+  }
+
+  td:before {
+    content: attr(data-cell) ": " !important;
+    font-weight: 700 !important;
+    text-transform: capitalize !important;
+  }
+}
+
+/* Pagination */
+
+.paginate_button {
+  background-color: transparent !important;
+  color: #111 !important;
+  border-radius: 5px !important;
+  border: 1px solid #ddd !important;
+  cursor: pointer !important;
+  /* Set cursor to pointer for non-disabled buttons */
+}
+
+/* Styling for active (current) page */
+.paginate_button.current {
+  background-color: #00dea3 !important;
+  color: #fff !important;
+  border-radius: 5px !important;
+  border: none !important;
+}
+
+/* Styling for disabled button */
+.paginate_button.disabled {
+  background-color: #ddd !important;
+  color: #777 !important;
+  cursor: not-allowed !important;
+  /* Set cursor to not-allowed for disabled buttons */
+}
+
+/* Styling for next button */
+.paginate_button.next {
+  background-color: transparent !important;
+  color: #111 !important;
+  /* border-radius: 5px !important;
+  border: none !important; */
+}
+
+/* Search */
+
+.dataTables_wrapper label {
+  color: #5f66e9 !important;
+  font-weight: bold;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  margin: 1rem 0 !important;
+}
+
+input[type="search"] {
+  width: 200px !important;
+  background-color: #fff !important;
+  padding: 1rem !important;
+  border: none !important;
+  border-radius: 5px !important;
+  outline: none !important;
+  transition: border-color 0.3s, box-shadow 0.3s !important;
+  font-size: 1rem !important;
+  color: #333 !important;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+input[type="search"]:focus {
+  border-color: #5f66e9 !important;
+  box-shadow: 0 0 8px rgba(95, 102, 233, 0.5) !important;
+}
+
+
+
+/* Customize input styles */
+#productAddModal input[type="file"],
+#productAddModal input[type="text"],
+#productAddModal select,
+#productAddModal input[type="number"] {
+  /* Add your desired styles here */
+  width: 100% !important;
+  padding: 10px !important;
+  margin-bottom: 10px !important;
+  border: 1px solid #dee2e6 !important;
+  /* Border color for inputs */
+  border-radius: 5px !important;
+  box-sizing: border-box !important;
+  color: #333 !important;
+}
+
+/* Add focus styles for better user experience */
+#productAddModal input[type="file"]:focus,
+#productAddModal input[type="text"]:focus,
+#productAddModal select:focus,
+#productAddModal input[type="number"]:focus {
+  outline: none !important;
+  border-color: #5f66e9 !important;
+  /* Border color when focused */
+  box-shadow: 0 0 8px rgba(95, 102, 233, 0.5) !important;
+  /* Box shadow when focused */
+}
+
+/* Optional: Customize the appearance of the file input button */
+#productAddModal input[type="file"]::-webkit-file-upload-button {
+  background-color: #5f66e9 !important;
+  color: #fff !important;
+  border: none !important;
+  padding: 10px !important;
+  margin: .3rem;
+  border-radius: 5px !important;
+  cursor: pointer !important;
+}
+
+#productAddModal input[type="file"]:focus::-webkit-file-upload-button {
+  background-color: #5f66e9 !important;
+}
+
+/* Reuse the same styles for Edit Product modal */
+#productEditModal input[type="file"],
+#productEditModal input[type="text"],
+#productEditModal select,
+#productEditModal input[type="number"] {
+  /* Add your desired styles here */
+  width: 100% !important;
+  padding: 10px !important;
+  margin-bottom: 10px !important;
+  border: 1px solid #dee2e6 !important;
+  /* Border color for inputs */
+  border-radius: 5px !important;
+  box-sizing: border-box !important;
+  color: #333 !important;
+}
+
+/* Add focus styles for better user experience */
+#productEditModal input[type="file"]:focus,
+#productEditModal input[type="text"]:focus,
+#productEditModal select:focus,
+#productEditModal input[type="number"]:focus {
+  outline: none !important;
+  border-color: #5f66e9 !important;
+  /* Border color when focused */
+  box-shadow: 0 0 8px rgba(95, 102, 233, 0.5) !important;
+  /* Box shadow when focused */
+}
+
+/* Optional: Customize the appearance of the file input button */
+#productEditModal input[type="file"]::-webkit-file-upload-button {
+  background-color: #5f66e9 !important;
+  color: #fff !important;
+  border: none !important;
+  padding: 10px !important;
+  margin: .3rem;
+  border-radius: 5px !important;
+  cursor: pointer !important;
+}
+
+#productEditModal input[type="file"]:focus::-webkit-file-upload-button {
+  background-color: #5f66e9 !important;
+}
+
+btn .btn-close {
+  btn-close: red !important;
+}
+
+button.btn {
+  background-color: #5f66e9 !important;
+  color: white !important;
+}

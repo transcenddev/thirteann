@@ -1,0 +1,325 @@
+:root {
+  --color1: #eff3fd;
+}
+
+
+body {
+  margin: 0;
+  transition: all 0.5s ease-in-out;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.flex {
+  display: flex;
+}
+
+.main-content {
+  /* margin-top: 1rem; */
+}
+
+h1 {
+  color: #111;
+}
+
+.title {
+  margin-bottom: 30px;
+}
+
+/* Mobile-first styles */
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  border: none;
+  /* Add a border for better visibility */
+
+  /* Additional styling for better visual appeal */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: box-shadow 0.3s ease;
+
+  /* Padding and margin adjustments */
+  padding: 1rem;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  cursor: pointer;
+  box-shadow: none;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .card {
+    max-width: 100%;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+  .card {
+    max-width: 600px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card {
+    max-width: 800px;
+  }
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+hr {
+  border: 2px solid #00dea3;
+}
+
+.card-title h1,
+.card-title p {
+  margin-bottom: 0px !important;
+}
+
+
+.main-content {
+  padding: 20px;
+
+  background-color: #eff3fd;
+
+  overflow-y: auto;
+}
+
+.sales-overview {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.table-section {
+  background-color: #ffffff;
+  padding: 20px;
+
+  border-radius: 20px;
+}
+
+#recent_orders_wrapper {
+  border: none;
+}
+
+#recent_orders th {
+  border: none;
+  background-color: #f7f8fa !important;
+}
+
+#recent_orders td {
+  border: none;
+}
+
+
+/* .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--container-color);
+  box-shadow: 0 1px 0 rgba(22, 8, 43, 0.1);
+  padding: 0 1rem;
+  z-index: var(--z-fixed);
+} */
+
+/* .label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+} */
+
+/* .dataTables_wrapper .dataTables_paginate .paginate_button {
+  padding: 0.5rem 0.75rem;
+  margin-left: 2px;
+  font-size: 14px;
+}
+
+.dataTables_filter {
+  display: flex;
+  padding: .40rem .75rem;
+  background-color: white;
+  border-radius: .25rem;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+} */
+
+.dataTables_wrapper .dataTables_filter input::placeholder {
+  /* font-family: black;
+  color: var(--text-color); */
+}
+
+/* Table Responsive */
+.wrapper {
+  width: min(2000px, 100% - 2rem) !important;
+  margin-inline: auto !important;
+}
+
+table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  background: #323232 !important;
+}
+
+th {
+  /* background-color: hsla(0, 0%, 100%, 0.9) !important; */
+}
+
+caption,
+th,
+td {
+  padding: 1rem !important;
+}
+
+caption,
+th {
+  text-align: left !important;
+}
+
+tr:nth-child(even) td {
+  background-color: #f7f8fa !important;
+}
+
+tr:nth-child(odd):hover td {
+  background-color: #f7f8fa !important;
+  cursor: pointer !important;
+}
+
+table.dataTable.no-footer {
+  border-bottom: none !important;
+  margin-bottom: 1rem !important;
+}
+
+
+@media (max-width: 1200px) {
+  th {
+    display: none;
+  }
+
+  td {
+    display: grid !important;
+    grid-template-columns: 15ch auto !important;
+    gap: 0.5rem !important;
+    padding: .5rem 1rem !important;
+  }
+
+  td:first-child {
+    padding-top: 2rem !important;
+  }
+
+  td:last-child {
+    padding-bottom: 2rem !important;
+  }
+
+  td:before {
+    content: attr(data-cell) ": " !important;
+    font-weight: 700 !important;
+    text-transform: capitalize !important;
+  }
+}
+
+/* Pagination */
+
+/* Default styling for pagination button */
+.paginate_button {
+  background-color: transparent !important;
+  color: #111 !important;
+  border-radius: 5px !important;
+  border: 1px solid #ddd !important;
+  cursor: pointer !important;
+  /* Set cursor to pointer for non-disabled buttons */
+}
+
+/* Styling for active (current) page */
+.paginate_button.current {
+  background-color: #00dea3 !important;
+  color: #fff !important;
+  border-radius: 5px !important;
+  border: none !important;
+}
+
+/* Styling for disabled button */
+.paginate_button.disabled {
+  background-color: #ddd !important;
+  color: #777 !important;
+  cursor: not-allowed !important;
+  /* Set cursor to not-allowed for disabled buttons */
+}
+
+/* Styling for next button */
+.paginate_button.next {
+  background-color: transparent !important;
+  color: #111 !important;
+  /* border-radius: 5px !important;
+  border: none !important; */
+}
+
+
+
+/* Search */
+
+.dataTables_wrapper label {
+  color: #5f66e9 !important;
+  font-weight: bold;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  margin: 1rem 0 !important;
+}
+
+input[type="search"] {
+  width: 100% !important;
+  max-width: 200px !important;
+  background-color: #fff !important;
+  padding: 1rem !important;
+  border: 2 px solid #5f66e9 !important;
+  border-radius: 5px !important;
+  outline: none !important;
+  transition: border-color 0.3s, box-shadow 0.3s !important;
+  font-size: 1rem !important;
+  color: #333 !important;
+
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important; */
+}
+
+/* input[type="search"]:focus {
+  border-color: #5f66e9 !important;
+  box-shadow: 0 0 8px rgba(95, 102, 233, 0.5) !important;
+} */
+
+/* icon */
+
+.card-title i {
+  color: #00dea3;
+}
